@@ -1,0 +1,34 @@
+{
+	"$id": "https://example.com/resources/contact.schema.json",
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Contact Collection",
+	"type": "array",
+	"items": {
+		"$ref": "#/definitions/contact"
+	},
+	"definitions": {
+		"contact": {
+			"type": "object",
+			"properties": {
+				"guid": {
+					"type": "string",
+					"description": "The contact's globally unique id."
+				},
+				"firstName": {
+					"type": "string",
+					"description": "The contact's first name."
+				},
+				"lastName": {
+					"type": "string",
+					"description": "The contact's last name."
+				},
+				"age": {
+					"description": "Age in years which must be equal to or greater than zero.",
+					"type": "integer",
+					"minimum": 0
+				}
+			}
+		}
+	}
+}
+
