@@ -10,7 +10,7 @@ import (
 	"path"
 )
 
-// ReadInputFiles from disk and convert to JSON schema.
+// ReadInputFiles from disk and convert to JSON schema collection
 func ReadInputFiles(inputFiles []string, schemaKeyRequired bool) ([]*Schema, error) {
 	schemas := make([]*Schema, len(inputFiles))
 	for i, file := range inputFiles {
@@ -36,6 +36,7 @@ func ReadInputFiles(inputFiles []string, schemaKeyRequired bool) ([]*Schema, err
 	return schemas, nil
 }
 
+// ReadInputJson from string and convert to single JSON schema structure
 func ReadInputJson(inputJson *string, schemaKeyRequired bool, fileURI *url.URL) (*Schema, error) {
 	schema, err := ParseWithSchemaKeyRequired(*inputJson, fileURI, schemaKeyRequired)
 	if err != nil {
