@@ -8,7 +8,8 @@ import (
 	"io"
 	"os"
 
-	"github.com/a-h/generate"
+	//"github.com/a-h/generate"
+	"github.com/DigiStratum/go-a-h-generate"
 )
 
 var (
