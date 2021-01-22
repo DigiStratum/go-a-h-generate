@@ -1,0 +1,13 @@
+{
+	"$id": "https://example.com/resources/simple.schema.json",
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Simple GUID",
+	"type": "object",
+	"properties": {
+		"guid": {
+			"type": "string",
+			"description": "A globally unique id."
+		}
+	}
+}
+
